@@ -1,0 +1,7 @@
+{
+    "require": {
+        "google/cloud-datastore": "^1.11",
+        "facebook/graph-sdk": "^5.7"
+
+    }
+}
