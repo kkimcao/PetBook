@@ -7,3 +7,11 @@ handlers:
 
 - url: /(.+\.php)$
   script: \1
+  
+
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: uploads/\1
+  upload: uploads/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+
+- url: /(.+\.js)$
+  script: \1
