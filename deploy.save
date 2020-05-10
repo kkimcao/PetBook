@@ -1,0 +1,6 @@
+#!/bin/bash
+gcloud app deploy
+echo y
+echo y
+echo y
+echo y
