@@ -29,8 +29,10 @@ if (! isset($_SESSION['access_token'])) {
 			<!-- Profile -->
 			<?php
 use Google\Cloud\Datastore\DatastoreClient;
+
 // grab dog profile
 if (isset($_SESSION['user_name'])) {
+    $_SESSION['dogname'] = '';
     $datastore = new DatastoreClient([
         'projectId' => $projectId
     ]);
@@ -40,6 +42,7 @@ if (isset($_SESSION['user_name'])) {
         ->filter('owner', '=', $_SESSION['user_name']);
     $result = $datastore->runQuery($query);
     foreach ($result as $entity) {
+        $_SESSION['dogname'] = $entity['dogname'];
         // echo "dog name:" . $entity['dogname'] . " colour " . $entity['colour'];
 
         echo "<div class=\"w3-card w3-round w3-white\">
@@ -153,85 +156,46 @@ if (isset($_SESSION['user_name'])) {
 					<div class="w3-card w3-round w3-white">
 						<div class="w3-container w3-padding">
 							<h6 class="w3-opacity">Social Media template by w3.css</h6>
-							<p contenteditable="true" class="w3-border w3-padding">Status:
-								Feeling Blue</p>
-							<button type="button" class="w3-button w3-theme">
-								<i class="fa fa-pencil"></i>  Post
-							</button>
-							<?php 
-							 $key = $datastore->key('dog');
+							<form action="post.php" method="post"
+								enctype="multipart/form-data">
+								<input type="text" name="status" class="w3-border w3-padding"
+									placeholder="Enter status" /> <br> <input
+									class="w3-button w3-theme" type="submit" name="submit"
+									value="Post" />
 
-    $task = $datastore->entity($key, [
-        'dogname' => $_POST['dogname'],
-        'birthdate' => $_POST['birthdate'],
-        'breed' => $_POST['breed'],
-        'owner' => $_SESSION['user_name'],
-        'colour' => $_POST['colour'],
-		'profilepic'=> $_FILES["fileToUpload"]["name"]
-    ]);
-    $datastore->insert($task);?>
+							</form>
+
+							</button>
+
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="w3-container w3-card w3-white w3-round w3-margin">
-				<br> <span class="w3-right w3-opacity">1 min</span>
-				<h4>John Doe</h4>
+<?php
+use Google\Cloud\Datastore\Query\Query;
+$query = $datastore->query()->kind('post')
+->order('date', Query::ORDER_DESCENDING);
+$result = $datastore->runQuery($query);
+foreach ($result as $entity) {
+    echo "<div class=\"w3-container w3-card w3-white w3-round w3-margin\">
+				<br> <span class=\"w3-right w3-opacity\">1 min</span>
+				<h4>".$entity['dogname']."</h4>
 				<br>
-				<hr class="w3-clear">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.</p>
-				<div class="w3-row-padding" style="margin: 0 -16px">
-					<div class="w3-half"></div>
-					<div class="w3-half"></div>
+				<hr class=\"w3-clear\">
+				<p>".$entity['status']."</p>
+				<div class=\"w3-row-padding\" style=\"margin: 0 -16px\">
+					<div class=\"w3-half\"></div>
+					<div class=\"w3-half\"></div>
 				</div>
-				<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">
-					<i class="fa fa-thumbs-up"></i>  Like
+				<button type=\"button\" class=\"w3-button w3-theme-d1 w3-margin-bottom\">
+					<i class=\"fa fa-thumbs-up\"></i>  Like
 				</button>
-				<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom">
-					<i class="fa fa-comment"></i>  Comment
+				<button type=\"button\" class=\"w3-button w3-theme-d2 w3-margin-bottom\">
+					<i class=\"fa fa-comment\"></i>  Comment
 				</button>
-			</div>
-
-			<div class="w3-container w3-card w3-white w3-round w3-margin">
-				<br> <span class="w3-right w3-opacity">16 min</span>
-				<h4>Jane Doe</h4>
-				<br>
-				<hr class="w3-clear">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.</p>
-				<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">
-					<i class="fa fa-thumbs-up"></i>  Like
-				</button>
-				<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom">
-					<i class="fa fa-comment"></i>  Comment
-				</button>
-			</div>
-
-			<div class="w3-container w3-card w3-white w3-round w3-margin">
-				<br> <span class="w3-right w3-opacity">32 min</span>
-				<h4>Angie Jane</h4>
-				<br>
-				<hr class="w3-clear">
-				<p>Have you seen this?</p>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.</p>
-				<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">
-					<i class="fa fa-thumbs-up"></i>  Like
-				</button>
-				<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom">
-					<i class="fa fa-comment"></i>  Comment
-				</button>
-			</div>
-
+			</div>";
+}
+?>
 			<!-- End Middle Column -->
 		</div>
 

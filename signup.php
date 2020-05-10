@@ -46,6 +46,7 @@ if(isset($_POST["submit"])) {
         'colour' => $_POST['colour'],
 		'profilepic'=> $_FILES["fileToUpload"]["name"]
     ]);
+    $_SESSION['dogname'] = $_POST['dogname'];
     $datastore->insert($task);
 	if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 		upload_object("petbookbucket", $_FILES["fileToUpload"]["name"], $target_file);
