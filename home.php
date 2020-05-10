@@ -172,6 +172,7 @@ if (isset($_SESSION['user_name'])) {
 				</div>
 			</div>
 <?php
+//Post statuses to datastore and retreive them
 use Google\Cloud\Datastore\Query\Query;
 $query = $datastore->query()->kind('post')
 ->order('date', Query::ORDER_DESCENDING);
