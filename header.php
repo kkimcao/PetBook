@@ -69,18 +69,9 @@ html, body, h1, h2, h3, h4, h5 {
 				href="signup.php">Register dog </a>
 				<a
 				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-				id="signin" href="signout.php">Sign out</a> 
+				 href="signout.php">Sign out</a> 
 
-<?php
 
-if (isset($_SESSION['user_name'])) {
-    echo "<div class='w3-right' id=\"status\">logged in as ".$_SESSION['user_name']."</div>";
-} else {
-    echo "<div class='w3-right' id=\"status\">not logged in</div>";
-}
-
-?>
-			
 
 		</div>
 	</div>
