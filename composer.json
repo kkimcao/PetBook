@@ -1,7 +1,5 @@
 {
     "require": {
-        "google/cloud-datastore": "^1.11",
-        "facebook/graph-sdk": "^5.7"
-
+        "google/appengine-php-sdk": "^1.9"
     }
 }
