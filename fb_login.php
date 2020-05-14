@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo 'No cookie set or no OAuth data could be obtained from cookie.';
         exit();
     }
-    $_SESSION['hometown']='';
+    $_SESSION['hometown'] = '';
     if (! empty($facebook_user_info['hometown'])) {
         $_SESSION['hometown'] = $facebook_user_info['hometown'];
     }

@@ -1,4 +1,5 @@
 <?php
+//create a post to datastore
 include ('config.php');
 session_start();
 require_once __DIR__ . '/vendor/autoload.php';
@@ -21,6 +22,5 @@ if (isset($_POST["submit"])) {
         echo 'Please register a dog first';
     }
     echo "<script>window.location.href = 'home.php'</script>";
-  
 }
 ?>

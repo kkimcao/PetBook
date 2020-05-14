@@ -1,15 +1,10 @@
 
-
 <?php
 include 'header.php';
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    session_destroy();
-    header('index.php');
-}
 
 ?>
-<script>function loadSDK() {
-    //https://www.nivas.hr/blog/2016/10/29/proper-way-include-facebook-sdk-javascript-jquery/
+
+<script>
     $(document).ready(function () {
         $.ajaxSetup({
             cache: true
@@ -20,7 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 xfbml : true,
                 version : 'v6.0'
             });
-            FB.getLoginStatus(function (response) {
+         
+
+        });
+    });
+	
+function logout() {
+	   FB.getLoginStatus(function (response) {
                 console.log("User response status is " + response.status);
                 if (response.status === 'connected') {
 
@@ -29,10 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     console.log("Logging out");
                     FB.api('/' + uid + '/permissions', 'delete', function (response) {});
                     window.location.href = 'index.php';
-                     <?php
-                    session_destroy();
-                    header('index.php');
-                     ?>
+                 
                     console.log("Session destroyed");
                 } else if (response.status === 'not_authorized') {
                     console.log("Logged into facebook but not authorised");
@@ -40,10 +38,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     console.log("User isnt logged into facebook");
                 }
             });
+			}
+    //https://www.nivas.hr/blog/2016/10/29/proper-way-include-facebook-sdk-javascript-jquery/
 
-        });
-    });
-}
+
 
 </script>
 
@@ -53,9 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-	<button class="logout" id="logout" onclick="loadSDK();"
+	<!--  <button class="logout" id="logout" onclick="logout();"
 		class="w3-button  w3-blue w3-round-xxlarge"
-		style="height: 20%; width: 30%">Logout</button>
+		style="height: 20%; width: 30%">Logout</button>-->
 
 	<br>
 	<script async defer crossorigin="anonymous"

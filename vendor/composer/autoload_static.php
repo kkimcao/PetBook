@@ -15,7 +15,10 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'c65d09b6820da036953a371c8c73a9b1' => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook/polyfills.php',
+<<<<<<< HEAD
+=======
         '6168a046c8c04f3c376e38a1d1912448' => __DIR__ . '/..' . '/google/appengine-php-sdk/google/appengine/runtime/autoloader.php',
+>>>>>>> 5eb106663010c3c32f8b227fa4738849eb61a26b
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -43,10 +46,15 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
             'Grpc\\Gcp\\' => 9,
             'Grpc\\' => 5,
             'Google\\Protobuf\\' => 16,
+<<<<<<< HEAD
+            'Google\\Cloud\\Datastore\\' => 23,
+            'Google\\Cloud\\Core\\' => 18,
+=======
             'Google\\Cloud\\Storage\\' => 21,
             'Google\\Cloud\\Datastore\\' => 23,
             'Google\\Cloud\\Core\\' => 18,
             'Google\\CRC32\\' => 13,
+>>>>>>> 5eb106663010c3c32f8b227fa4738849eb61a26b
             'Google\\Auth\\' => 12,
             'Google\\ApiCore\\' => 15,
             'Google\\' => 7,
@@ -114,10 +122,13 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
         array (
             0 => __DIR__ . '/..' . '/google/protobuf/src/Google/Protobuf',
         ),
+<<<<<<< HEAD
+=======
         'Google\\Cloud\\Storage\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/cloud-storage/src',
         ),
+>>>>>>> 5eb106663010c3c32f8b227fa4738849eb61a26b
         'Google\\Cloud\\Datastore\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/cloud-datastore/src',
@@ -126,10 +137,13 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
         array (
             0 => __DIR__ . '/..' . '/google/cloud-core/src',
         ),
+<<<<<<< HEAD
+=======
         'Google\\CRC32\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/crc32/src',
         ),
+>>>>>>> 5eb106663010c3c32f8b227fa4738849eb61a26b
         'Google\\Auth\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/auth/src',

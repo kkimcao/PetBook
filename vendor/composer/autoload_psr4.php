@@ -19,10 +19,15 @@ return array(
     'Grpc\\Gcp\\' => array($vendorDir . '/google/grpc-gcp/src'),
     'Grpc\\' => array($vendorDir . '/grpc/grpc/src/lib'),
     'Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/Google/Protobuf'),
+<<<<<<< HEAD
+    'Google\\Cloud\\Datastore\\' => array($vendorDir . '/google/cloud-datastore/src'),
+    'Google\\Cloud\\Core\\' => array($vendorDir . '/google/cloud-core/src'),
+=======
     'Google\\Cloud\\Storage\\' => array($vendorDir . '/google/cloud-storage/src'),
     'Google\\Cloud\\Datastore\\' => array($vendorDir . '/google/cloud-datastore/src'),
     'Google\\Cloud\\Core\\' => array($vendorDir . '/google/cloud-core/src'),
     'Google\\CRC32\\' => array($vendorDir . '/google/crc32/src'),
+>>>>>>> 5eb106663010c3c32f8b227fa4738849eb61a26b
     'Google\\Auth\\' => array($vendorDir . '/google/auth/src'),
     'Google\\ApiCore\\' => array($vendorDir . '/google/gax/src'),
     'Google\\' => array($vendorDir . '/google/common-protos/src'),
