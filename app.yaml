@@ -8,13 +8,14 @@ handlers:
 - url: /(.+\.php)$
   script: \1
   
-
-- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
-  static_files: uploads/\1
-  upload: uploads/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+- url: /uploads
+  static_dir: uploads
 
 - url: /(.+\.js)$
   script: \1
   
 - url: /css
   static_dir: css
+  
+- url: /images
+  static_dir: images
