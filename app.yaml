@@ -1,6 +1,9 @@
 runtime: php55
 api_version: 1
 
+runtime_config:
+  enable_stackdriver_integration: true
+
 handlers:
 - url: /
   script: index.php

@@ -8,12 +8,14 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         'c65d09b6820da036953a371c8c73a9b1' => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook/polyfills.php',
         '6168a046c8c04f3c376e38a1d1912448' => __DIR__ . '/..' . '/google/appengine-php-sdk/google/appengine/runtime/autoloader.php',
     );
@@ -24,12 +26,23 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
             'Symfony\\Polyfill\\Php72\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+        ),
+        'R' => 
+        array (
+            'Ramsey\\Uuid\\' => 12,
         ),
         'P' => 
         array (
+            'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Cache\\' => 10,
+        ),
+        'O' => 
+        array (
+            'OpenCensus\\Trace\\Exporter\\' => 26,
+            'OpenCensus\\' => 11,
         ),
         'M' => 
         array (
@@ -43,14 +56,22 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
             'Grpc\\Gcp\\' => 9,
             'Grpc\\' => 5,
             'Google\\Protobuf\\' => 16,
+            'Google\\Cloud\\Trace\\' => 19,
             'Google\\Cloud\\Storage\\' => 21,
+            'Google\\Cloud\\Logging\\' => 21,
+            'Google\\Cloud\\Debugger\\' => 22,
             'Google\\Cloud\\Datastore\\' => 23,
             'Google\\Cloud\\Core\\' => 18,
+            'Google\\Cloud\\BigQuery\\' => 22,
+            'Google\\Cloud\\' => 13,
             'Google\\CRC32\\' => 13,
             'Google\\Auth\\' => 12,
             'Google\\ApiCore\\' => 15,
             'Google\\' => 7,
             'GPBMetadata\\Google\\Protobuf\\' => 28,
+            'GPBMetadata\\Google\\Logging\\' => 27,
+            'GPBMetadata\\Google\\Devtools\\Cloudtrace\\' => 39,
+            'GPBMetadata\\Google\\Devtools\\Clouddebugger\\' => 42,
             'GPBMetadata\\Google\\Datastore\\' => 29,
             'GPBMetadata\\Google\\' => 19,
         ),
@@ -58,6 +79,11 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
         array (
             'Firebase\\JWT\\' => 13,
             'Facebook\\' => 9,
+        ),
+        'C' => 
+        array (
+            'Cache\\TagInterop\\' => 17,
+            'Cache\\Adapter\\Common\\' => 21,
         ),
     );
 
@@ -74,6 +100,18 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-intl-idn',
         ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Ramsey\\Uuid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ramsey/uuid/src',
+        ),
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -85,6 +123,14 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
         'Psr\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
+        ),
+        'OpenCensus\\Trace\\Exporter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/opencensus/opencensus-exporter-stackdriver/src',
+        ),
+        'OpenCensus\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/opencensus/opencensus/src',
         ),
         'Monolog\\' => 
         array (
@@ -114,9 +160,21 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
         array (
             0 => __DIR__ . '/..' . '/google/protobuf/src/Google/Protobuf',
         ),
+        'Google\\Cloud\\Trace\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/cloud-trace/src',
+        ),
         'Google\\Cloud\\Storage\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/cloud-storage/src',
+        ),
+        'Google\\Cloud\\Logging\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/cloud-logging/src',
+        ),
+        'Google\\Cloud\\Debugger\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/cloud-debugger/src',
         ),
         'Google\\Cloud\\Datastore\\' => 
         array (
@@ -125,6 +183,14 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
         'Google\\Cloud\\Core\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/cloud-core/src',
+        ),
+        'Google\\Cloud\\BigQuery\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/cloud-bigquery/src',
+        ),
+        'Google\\Cloud\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/cloud-common-protos/src',
         ),
         'Google\\CRC32\\' => 
         array (
@@ -146,14 +212,27 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
         array (
             0 => __DIR__ . '/..' . '/google/protobuf/src/GPBMetadata/Google/Protobuf',
         ),
+        'GPBMetadata\\Google\\Logging\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/cloud-logging/metadata',
+        ),
+        'GPBMetadata\\Google\\Devtools\\Cloudtrace\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/cloud-trace/metadata',
+        ),
+        'GPBMetadata\\Google\\Devtools\\Clouddebugger\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/cloud-debugger/metadata',
+        ),
         'GPBMetadata\\Google\\Datastore\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/cloud-datastore/metadata',
         ),
         'GPBMetadata\\Google\\' => 
         array (
-            0 => __DIR__ . '/..' . '/google/common-protos/metadata',
-            1 => __DIR__ . '/..' . '/google/gax/metadata',
+            0 => __DIR__ . '/..' . '/google/cloud-common-protos/metadata',
+            1 => __DIR__ . '/..' . '/google/common-protos/metadata',
+            2 => __DIR__ . '/..' . '/google/gax/metadata',
         ),
         'Firebase\\JWT\\' => 
         array (
@@ -162,6 +241,14 @@ class ComposerStaticInitf7c44403b86bf150d288d5dc76b22454
         'Facebook\\' => 
         array (
             0 => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook',
+        ),
+        'Cache\\TagInterop\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cache/tag-interop',
+        ),
+        'Cache\\Adapter\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cache/adapter-common',
         ),
     );
 

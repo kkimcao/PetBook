@@ -4,7 +4,9 @@ if (! isset($_SESSION)) {
     session_start();
 }
 
+
 $loggedin = 0;
+
 if (isset($_SESSION['access_token'])) {
     $uid = $_SESSION['uid'];
     $accesstoken = $_SESSION['access_token'];
@@ -26,7 +28,7 @@ if (isset($_SESSION['access_token'])) {
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+  
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
@@ -38,7 +40,7 @@ if (isset($_SESSION['access_token'])) {
 
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+ 
 
     <link rel="stylesheet" href="css/aos.css">
 
