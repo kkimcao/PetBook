@@ -191,7 +191,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 										<div class=\"row\">
 											<div class=\"col-sm-2\">
 												<a href=\"#\" class=\"post-avatar\"><img class=\"img-thumbnail\"
-													src=\"" . $_SESSION['profilepic'] . "\"
+													src=\"" . $entity['profilepic'] . "\"
 													alt=\"profile pic\">
 													<p class=\"username text-center\">" . $entity['dogname'] . "</p> </a>
 											</div>
