@@ -54,7 +54,7 @@ if (isset($_SESSION['access_token'])) {
         <div class="row align-items-center" style="padding-top: 25px;">
           
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="<?php if($loggedin ==1) { echo 'home.php';} else { echo 'index.php';}?>" class="h2 mb-0"><strong>Pet</strong>Books<span class="text-primary">.</span> </a></h1>
+            <h1 class="mb-0 site-logo"><a href="<?php if($loggedin ==1) { echo 'home.php';} else { echo 'index.php';}?>" class="h2 mb-0"><strong>Pet</strong>Book<span class="text-primary">.</span> </a></h1>
           </div>
 
 
