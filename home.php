@@ -96,7 +96,7 @@ require_once __DIR__ . '/vendor/autoload.php';
     ?>
 			
 
-			
+
 
 
 				<div class="sidebar-box">
@@ -187,7 +187,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 													alt=\"profile pic\">
 													<p class=\"username text-center\">" . $entity['dogname'] . "</p> </a>
 											</div>
-											<div class=\"col-sm-10\">
+											<div class=\"col-sm-10 align-self-center\">
 												<div class=\"bubble\">
 													<div class=\"pointer\">
 														<p>" . $entity['status'] . "</p>
@@ -196,58 +196,14 @@ require_once __DIR__ . '/vendor/autoload.php';
 												</div>
 												<!--end bubble-->
 
-												<div class=\"comment-form\">
-													<form class=\"form-inline\">
-														<div class=\"form-group mb-2\">
-															<label for=\"commentInput\" class=\"sr-only\">Comment</label>
-															<input type=\"text\" readonly
-																class=\"form-control-plaintext\" id=\"commentInput\"
-																placeholder=\"Reply\">
-														</div>
-														<button type=\"submit\" class=\"btn btn-dark mb-2\">Comment</button>
-													</form>
-												</div>
+												
 											</div>
 										</div>
 									</div>";
         }
         ?>
 									
-									 <!-- <div class="comments">
-										<div class="card comment offset-sm-1">
-											<div class="card-body">
-												<div class="row">
-													<div class="col-sm-2">
-														<a href="#" class="post-avatar"><img class="img-thumbnail"
-															src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sea_otter_cropped.jpg/200px-Sea_otter_cropped.jpg"
-															alt="sea otter">
-															<p class="username text-center">Golden</p> </a>
-													</div>
-													<div class="col-sm-10">
-														<div class="bubble">
-															<div class="pointer">
-																<p>Me too.</p>
-															</div>
-															<div class="pointer-border"></div>
-														</div> -->
-									<!--end bubble-->
-
-									<!-- <div class="comment-form">
-															<form class="form-inline">
-																<div class="form-group mb-2">
-																	<label for="commentInput" class="sr-only">Comment</label>
-																	<input type="text" readonly
-																		class="form-control-plaintext" id="commentInput"
-																		placeholder="Reply">
-																</div>
-																<button type="submit" class="btn btn-dark mb-2">Comment</button>
-															</form>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!--end of comment-->
+									 
 
 									<!--</div> -->
 
