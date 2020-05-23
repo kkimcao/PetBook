@@ -96,15 +96,7 @@ require_once __DIR__ . '/vendor/autoload.php';
     ?>
 			
 
-				<div class="sidebar-box">
-					<div class="categories">
-						<h3>My profile</h3>
-						<li><a href="#">Friends <span>(12)</span></a></li>
-						<li><a href="#">Photos<span>(22)</span></a></li>
-						<li><a href="#">Events<span>(42)</span></a></li>
-					</div>
-				</div>
-
+			
 
 
 				<div class="sidebar-box">
