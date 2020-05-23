@@ -15,6 +15,7 @@ if (isset($_POST["submit"])) {
         $task = $datastore->entity($key, [
             'status' => $_POST['status'],
             'dogname' => $_SESSION['dogname'],
+			'profilepic' => $_SESSION['profilepic'],
             'date' => $time
         ]);
         $datastore->insert($task);
