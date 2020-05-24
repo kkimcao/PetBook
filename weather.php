@@ -54,7 +54,7 @@ foreach ($queryResults as $row) {
 		$weather = $value;
     }
 }
-echo $weather. " °C <br>on ".$date;
+echo $weather. " °C on ".$date;
 
 	?>
 
