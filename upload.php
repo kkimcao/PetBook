@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['dogname'] = $_POST['dogname'];
         $datastore->insert($task);
         $_SESSION['profilepic'] = CloudStorageTools::getImageServingUrl($original);
-        echo "<script>window.location = 'https://petbook-2020.appspot.com/home.php';</script>";
+        echo "<script>window.location = 'https://petbook2020.com/index.php';</script>";
     }
 }
 ?>
