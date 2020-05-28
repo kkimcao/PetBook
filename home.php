@@ -96,19 +96,11 @@ require_once __DIR__ . '/vendor/autoload.php';
     ?>
 			
 
-				<div class="sidebar-box">
-					<div class="categories">
-						<h3>My profile</h3>
-						<li><a href="#">Friends <span>(12)</span></a></li>
-						<li><a href="#">Photos<span>(22)</span></a></li>
-						<li><a href="#">Events<span>(42)</span></a></li>
-					</div>
-				</div>
 
 
 
 				<div class="sidebar-box">
-					<h3>Nearby Dog Parks</h3>
+					<h3>Find weather for date:</h3>
 					
 					<div class="maparea">
 					<script>
@@ -132,25 +124,30 @@ require_once __DIR__ . '/vendor/autoload.php';
     });
 });
 					</script>
-					Find weather for date:
-					<form id="getdate" action="" method="post"
-											enctype="multipart/form-data">
-											<div class="form-group">
-												<label for="wallInput" class="sr-only"
-													placeholder="Write something">Date</label>
-												<textarea name="date" class="form-control" id="wallInput"
-													rows="1" placeholder="YYYY-MM-DD"></textarea>
-											</div>
-											<button name="datesubmit" type="submit" class="btn btn-dark">Get weather</button>
-										</form>
-						Minimum temperature is <div id="results"><?php include 'weather.php'; ?></div>
-					<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8598355237996!2d144.99850985164912!3d-37.81675194188948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642f7448d1f65%3A0xf04567605318770!2sCitizens%20Park!5e0!3m2!1sen!2sau!4v1589472852667!5m2!1sen!2sau"
-							width="300" height="300" frameborder="0" style="border: 0;"
-							allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					
+					<form id="getdate" action="" method="post" enctype="multipart/form-data">
+						<div class="form-group">
+							<label for="wallInput" class="sr-only" placeholder="Write something">Date</label>
+								<textarea name="date" class="form-control" id="wallInput" rows="1" placeholder="YYYY-MM-DD"></textarea>
+						</div>
+						<button name="datesubmit" type="submit" class="btn btn-dark">Search</button>
+					</form>
+						Minimum temperature was <div id="results"><?php include 'weather.php'; ?></div>
+				
 					</div>
 				</div>
-			</div>
+				
+				
+			<div class="sidebar-box" style="margin-bottom: 0px;padding-top: 0px;">
+				<h3 style="padding-top: 25px;">Most popular dog park in Victoria</h3>
+   				<div class="maparea">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8598355237996!2d144.99850985164912!3d-37.81675194188948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642f7448d1f65%3A0xf04567605318770!2sCitizens%20Park!5e0!3m2!1sen!2sau!4v1589472852667!5m2!1sen!2sau" width="300" height="300" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</div>
+    			</div>
+			
+			
+			
+	</div>
 
 			<div class="col-md-8 blog-content">
 
@@ -195,7 +192,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 													alt=\"profile pic\">
 													<p class=\"username text-center\">" . $entity['dogname'] . "</p> </a>
 											</div>
-											<div class=\"col-sm-10\">
+											<div class=\"col-sm-10 align-self-center\">
 												<div class=\"bubble\">
 													<div class=\"pointer\">
 														<p>" . $entity['status'] . "</p>
@@ -204,58 +201,14 @@ require_once __DIR__ . '/vendor/autoload.php';
 												</div>
 												<!--end bubble-->
 
-												<div class=\"comment-form\">
-													<form class=\"form-inline\">
-														<div class=\"form-group mb-2\">
-															<label for=\"commentInput\" class=\"sr-only\">Comment</label>
-															<input type=\"text\" readonly
-																class=\"form-control-plaintext\" id=\"commentInput\"
-																placeholder=\"Reply\">
-														</div>
-														<button type=\"submit\" class=\"btn btn-dark mb-2\">Comment</button>
-													</form>
-												</div>
+												
 											</div>
 										</div>
 									</div>";
         }
         ?>
 									
-									 <!-- <div class="comments">
-										<div class="card comment offset-sm-1">
-											<div class="card-body">
-												<div class="row">
-													<div class="col-sm-2">
-														<a href="#" class="post-avatar"><img class="img-thumbnail"
-															src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sea_otter_cropped.jpg/200px-Sea_otter_cropped.jpg"
-															alt="sea otter">
-															<p class="username text-center">Golden</p> </a>
-													</div>
-													<div class="col-sm-10">
-														<div class="bubble">
-															<div class="pointer">
-																<p>Me too.</p>
-															</div>
-															<div class="pointer-border"></div>
-														</div> -->
-									<!--end bubble-->
-
-									<!-- <div class="comment-form">
-															<form class="form-inline">
-																<div class="form-group mb-2">
-																	<label for="commentInput" class="sr-only">Comment</label>
-																	<input type="text" readonly
-																		class="form-control-plaintext" id="commentInput"
-																		placeholder="Reply">
-																</div>
-																<button type="submit" class="btn btn-dark mb-2">Comment</button>
-															</form>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!--end of comment-->
+									 
 
 									<!--</div> -->
 
